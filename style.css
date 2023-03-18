@@ -1,6 +1,11 @@
 * {
   font-family: sans-serif;
 }
+:root{
+  --th: white;
+  --dt: #505050;
+  --bg: #202020;
+}
 html {
   height: 100%;
   width: 100%;
@@ -9,14 +14,19 @@ html, body {
   margin: 0;
   padding: 0;
 }
+section {
+  margin: 0;
+  padding: 20vw;
+  color: white;
+  background: #202020;
+}
 section#hero {
   margin: 0;
   padding: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #202020;
+  height: 100vh;
 }
 section#hero div.h-c {
   display: flex;
@@ -26,4 +36,49 @@ section#hero div.h-c {
   color: white;
   padding: 5vw;
   border-radius: 10vw;
+}
+button {
+  width: max(5vw, 200px); 
+}
+button.fill {
+  border: none;
+  background: var(--th);
+  color: #202020;
+  padding: 5%;
+  transition: 300ms;
+}
+button.fill:hover {
+  background: #505050;
+  color: var(--th);
+}
+a.b-p {
+  text-decoration: none;
+}
+div.p-c {
+  width: 50vw;
+  margin: 5vh 0;
+  background: var(--dt);
+  border-radius: 3vw;
+  padding: 5vw;
+  position: relative;
+}
+div.p-c img {
+  width: 45vw;
+}
+div.hov {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: var(--bg);
+  transition: 300ms;
+}
+div.hov:hover {
+  opacity: 80%;
+  border: inherit;
 }
