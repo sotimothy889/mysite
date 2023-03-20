@@ -38,14 +38,14 @@ section#hero div.h-c {
   border-radius: 10vw;
 }
 button {
-  width: max(5vw, 200px); 
+  width: max-content; 
 }
 button.fill {
   border: none;
   background: var(--th);
   color: #202020;
-  padding: 5%;
-  transition: 300ms;
+  padding: 10px;
+  transition: 300ms ease-in-out;
 }
 button.fill:hover {
   background: #505050;
@@ -54,16 +54,23 @@ button.fill:hover {
 a.b-p {
   text-decoration: none;
 }
+div.ugc {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2vw;
+}
 div.p-c {
-  width: 50vw;
-  margin: 5vh 0;
+  width: min(50vw,20rem);
+  margin: 2vh 0;
   background: var(--dt);
-  border-radius: 3vw;
-  padding: 5vw;
+  border-radius: calc(min(50vw,20rem)/20);
+  padding: min(5vw,1rem);
   position: relative;
 }
 div.p-c img {
-  width: 45vw;
+  width: 90%;
+  border-radius: inherit;
 }
 div.hov {
   height: 100%;
@@ -76,7 +83,7 @@ div.hov {
   justify-content: center;
   opacity: 0;
   background-color: var(--bg);
-  transition: 300ms;
+  transition: 200ms ease-in-out;
 }
 div.hov:hover {
   opacity: 80%;
