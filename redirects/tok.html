@@ -11,12 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lightbulb_2"
     />
     <style>
-      @media screen and (max-width: 600px) {
-        .social-link p {
-          display: none;
-        }
-        
-      }
       * {
         box-sizing: border-box;
       }
@@ -44,23 +38,28 @@
         flex-direction: row;
         align-items: center;
         text-decoration: none;
-        color: white;
+        color: var(--th);
         gap: 1ch;
         padding: 1rem;
         position: relative;
         z-index: 2;
         box-shadow: 0 0 0 var(--dt);
-        transition: all 100ms ease-in-out;
+        transition: all 100ms cubic-bezier(0.65, 0.05, 0.36, 1);
+        border-radius: 0;
+      }
+      .social-link p {
+        margin: 0;
       }
       .social-link:hover {
-        box-shadow: 10px 10px 0 white;
+        box-shadow: 10px 10px 0 var(--th);
+        border-radius: 1rem;
       }
       .social-link img {
         height: 1.5rem;
         width: auto;
       }
       .youtube {
-        background: #ff0000;
+        background: #730013;
       }
       .wikipedia {
         background: #636466;
@@ -69,7 +68,25 @@
         color: white;
       }
       .source {
-        background: #00aaff;
+        background: #004072;
+      }
+      @media screen and (max-width: 600px) {
+        .social-link p {
+          width:0;
+          overflow: clip;
+          transition: width 100ms cubic-bezier(0.65, 0.05, 0.36, 1);
+          text-wrap: nowrap;
+        }
+        .social-link {
+          gap: 0;
+        }
+        .social-link:hover {
+          gap: 1ch;
+        }
+        .social-link:hover p {
+          width: 15ch;
+        }
+        
       }
     </style>
   </head>
@@ -178,6 +195,7 @@
           >
         </div>
       </div>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" style="text-decoration: none; color: var(--th)">CC BY-SA 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"></a>
     </div>
   </body>
 </html>
