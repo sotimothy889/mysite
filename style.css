@@ -9,19 +9,32 @@
 html {
   height: 100%;
   width: 100%;
+  font-size: 16px;
 }
 html, body {
   margin: 0;
   padding: 0;
+  height:100%;
+  width: 100%;
   background: var(--bg);
   color: var(--th);
 }
 section {
   margin: 0;
-  padding: 20vw;
   color: white;
   background: #202020;
 }
+
+h1{
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1rem;
+}
+
 section#hero {
   margin: 0;
   padding: 0;
